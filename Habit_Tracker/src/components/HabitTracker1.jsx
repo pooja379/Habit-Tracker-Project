@@ -13,7 +13,7 @@ export default function HabitTracker1() {
 
     console.log("Frontend fetching habits for:", user);
 
-    fetch(`http://localhost:5000/api/habits/${user}`)
+    fetch(`https://habit-tracker-backend-jn9l.onrender.com/api/habits/${user}`)
       .then(res => res.json())
       .then(data => setHabits(Array.isArray(data) ? data : []));
   };
@@ -24,7 +24,7 @@ export default function HabitTracker1() {
 
   //  MARK DONE
   const markDone = async (id) => {
-    await fetch(`http://localhost:5000/api/habits/done/${id}`, {
+    await fetch(`https://habit-tracker-backend-jn9l.onrender.com/api/habits/done/${id}`, {
       method: "PUT",
     });
 
@@ -33,7 +33,7 @@ export default function HabitTracker1() {
 
   // DELETE HABIT
   const deleteHabit = async (id) => {
-    await fetch(`http://localhost:5000/api/habits/${id}`, {
+    await fetch(`https://habit-tracker-backend-jn9l.onrender.com/api/habits/${id}`, {
       method: "DELETE",
     });
 

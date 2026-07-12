@@ -23,7 +23,7 @@ export default function AddHabitForm({ user, onHabitAdded }) {
       return;
     }
 
-    const response = await fetch("http://localhost:5000/api/habits", {
+    const response = await fetch("https://habit-tracker-backend-jn9l.onrender.com/api/habits", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
